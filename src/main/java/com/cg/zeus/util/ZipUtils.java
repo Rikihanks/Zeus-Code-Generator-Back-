@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
@@ -50,7 +51,10 @@ public class ZipUtils {
                     .sorted(Comparator.reverseOrder())
                     .map(Path::toFile)
                     .forEach(File::delete);
-        } catch (IOException e) {
+        } catch (NoSuchFileException e2) {
+            System.out.println("/tmp No existe.");
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
 

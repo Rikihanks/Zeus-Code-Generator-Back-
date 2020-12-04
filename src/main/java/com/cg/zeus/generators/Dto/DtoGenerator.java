@@ -62,7 +62,7 @@ public class DtoGenerator extends Generator {
 
         for (Map.Entry<String, String> entry : entityFields.entrySet()) {
             hConstructor+=StringUtils.TABS+StringUtils.TABS;
-            hConstructor+= "this. "+entry.getKey()+ " = " + entry.getKey() + ";\n";
+            hConstructor+= "this."+entry.getKey()+ " = " + entry.getKey() + ";\n";
         }
         hConstructor+=StringUtils.TABS+"}";
 

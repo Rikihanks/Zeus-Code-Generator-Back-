@@ -19,7 +19,7 @@ import java.util.Base64;
 import java.util.zip.ZipOutputStream;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class MainController {
 
